@@ -41,6 +41,7 @@ app.include_router(expense_router)
 app.include_router(reconcile_router)
 app.include_router(dashboard_router.router)
 
+
 @app.get("/")
-def home():
-    return "Your App is Running"   
+async def root():
+    return {"message": "Expensight API running!"} 
